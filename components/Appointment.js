@@ -1,9 +1,10 @@
 import { View } from 'react-native'
 import styled from 'styled-components/native'
+import GrayText from './GrayText'
 
-export default function Appointment({user,diagnosis,active,time}) {
+export default function Appointment({user,diagnosis,active,time,navigate}) {
     return (
-        <GroupItem>
+        <GroupItem onPress={()=>navigate('Patient')}>
             <Avatar source={{
                 uri: user.image
             }}/>
@@ -26,11 +27,6 @@ const GroupDate = styled.Text`
   width: 70px;
   text-align: center;
   line-height: 28px;
-`
-
-const GrayText = styled.Text`
-  font-size: 16px;
-  color: #8b979f;
 `
 
 const FullName = styled.Text`
