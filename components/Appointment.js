@@ -1,6 +1,7 @@
 import { View } from 'react-native'
 import styled from 'styled-components/native'
 import GrayText from './GrayText'
+import Badge from './Badge'
 
 export default function Appointment({user,diagnosis,active,time,navigate}) {
     return (
@@ -12,22 +13,13 @@ export default function Appointment({user,diagnosis,active,time,navigate}) {
                 <FullName>{user.fullname}</FullName>
                 <GrayText>{diagnosis}</GrayText>
             </View>
-            <GroupDate active={active}>{time}</GroupDate>
+            <Badge active={active}>{time}</Badge>
         </GroupItem>
     )
 }
 
 
-const GroupDate = styled.Text`
-  background: ${props => props.active ? '#2A86FF' : '#e9f5ff'};
-  color: ${props => props.active ? '#FFF' : '#4294ff'};
-  border-radius: 18px;
-  font-weight: 600;
-  font-size: 14px;
-  width: 70px;
-  text-align: center;
-  line-height: 28px;
-`
+
 
 const FullName = styled.Text`
   font-weight: 600;
