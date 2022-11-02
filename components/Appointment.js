@@ -4,7 +4,7 @@ import GrayText from './GrayText'
 
 export default function Appointment({user,diagnosis,active,time,navigate}) {
     return (
-        <GroupItem onPress={()=>navigate('Patient')}>
+        <GroupItem onPress={()=>navigate('Patient',{user})}>
             <Avatar source={{
                 uri: user.image
             }}/>

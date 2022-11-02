@@ -8,6 +8,7 @@ const data = [
     {
         active: true, diagnosis: 'лечение зубов, легкий кариес',
         time: '11:30', user:{
+            phone:'+7(927)434-11-22',
             image: 'https://upload.wikimedia.org/wikipedia/commons/a/af/Dwayne_Johnson_2014%28Cropped%29.jpg',
             fullname: 'Дуэйн Джонсон',
         }
@@ -15,6 +16,7 @@ const data = [
     {
         active: false, diagnosis: 'удаление зубов',
         time: '14:30', user:{
+            phone:'+(792)703-04-22',
             image: 'https://s2.vcdn.biz/static/f/2326760021/image.jpg',
             fullname: 'Джеки Чан',
         }
@@ -31,6 +33,7 @@ const DATA = [
 ]
 
 const HomeScreen = ({ navigation }) => {
+
     return (
         <Container>
             <SectionList
